@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drag and drop more than one field</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #firstSection, #secondSection, #thirdSection{
+            display: inline-block;
+            width: 15%;
+            padding: 0 0.5%;
+            background-color: rgb(240, 240, 240);
+            vertical-align: top;
+        }
+        #firstSection_input, #secondSection_input, #thirdSection_input{
+            width: 95%;
+            height: 25px;
+            border: 0.5px solid white;
+            border-radius: 3px;
+            margin: 1% 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="firstSection" ondragover="allowDrop(event)" ondrop="dropElement(event, this)" >
+        <h4>Things to Do</h4>
+        <section class="dropElementsHere" ondragover="allowDrop(event)">
+            <input type="text" id="firstSection_input" draggable="true" ondragstart="drag(event)">
+        </section>
+        <h4>+Add another card</h4>
+    </section>
+    <section id="secondSection" ondragover="allowDrop(event)" ondrop="dropElement(event, this)">
+        <h4>Doing</h4>
+        <section class="dropElementsHere" ondragover="allowDrop(event)">
+            <input type="text" id="secondSection_input" draggable="true" ondragstart="drag(event)">
+        </section>
+        <h4>+Add a card</h4>
+    </section>
+    <section id="thirdSection" ondragover="allowDrop(event)" ondrop="dropElement(event, this)">
+        <h4>Done</h4>
+        <section class="dropElementsHere" ondragover="allowDrop(event)">
+            <input type="text" id="thirdSection_input" draggable="true" ondragstart="drag(event)">
+        </section>
+        <h4>+Add a card</h4>
+    </section>
+    <script src="main.js"></script>
+
+</body>
+</html>
